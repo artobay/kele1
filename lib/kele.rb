@@ -21,7 +21,6 @@ class Kele
 
    def get_me
        response = JSON.parse(Kele.get(@api_url+"/users/me", headers: { "authorization" => @auth_token}).body)
-       response["auth_token"]
    end 
    
 
