@@ -29,4 +29,14 @@ class Kele
    end 
    
    
+
+    def get_messages
+    response = JSON.parse(Kele.get(@api_url+"/message_threads", headers: { "authorization" => @auth_token}).body)
+    end
+
+    def create_message(recipient_id, message,email)
+    response = Kele.post(@api_url+"/messages", headers: { "authorization" => @auth_token} , body: { "sender" => email, "recipient_id" => recipient_id, "stripped-text" => message})
+    end
+
+   
 end 
