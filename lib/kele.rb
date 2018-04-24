@@ -35,10 +35,12 @@ class Kele
 
 
       def get_messages
-          response = JSON.parse(Kele.get(
+          response = Kele.get(
           base_uri+ "/message_threads", headers: {
           "authorization" => @auth_token
-          }).body)
+          })
+          
+            JSON.parse(response.body)
       end
 
       def create_message(recipient_id, message, email)
@@ -50,6 +52,8 @@ class Kele
             "recipient_id" => recipient_id,
             "stripped-text" => message
             })
-       end
+            
+             JSON.parse(response.body)
+      end
     
 end 
