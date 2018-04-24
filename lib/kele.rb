@@ -35,13 +35,15 @@ class Kele
 
 
       def get_messages
-          response = JSON.parse(Kele.get(@api_url + "/message_threads", headers: {
+          response = JSON.parse(Kele.get(
+          base_uri+ "/message_threads", headers: {
           "authorization" => @auth_token
           }).body)
       end
 
       def create_message(recipient_id, message, email)
-          response = Kele.post(@api_url + "/messages", headers: {
+          response = Kele.post(
+          base_uri + "/messages", headers: {
           "authorization" => @auth_token
            }, body: {
             "sender" => email,
