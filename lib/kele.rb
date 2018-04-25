@@ -56,16 +56,14 @@ class Kele
              JSON.parse(response.body)
       end
       
-        def create_submission(checkpoint_id, enrollment_id)
-          response = Kele.post(
-              base_uri + "/checkpoint_submissions", 
+        def get_remaining_checkpoints(chain_id)
+          response = Kele.get(
+              base_uri + "/enrollment_chains/#{chain_id}/remainin_in_section", 
               headers: {  "authorization" => @auth_token}, 
               body: { 
-                  "enrollment_id" => enrollment_id, 
-                  "checkpoint_id" => checkpoint_id})
+                  "chain_id" => chain_id})
                   
              JSON.parse(response.body)
        end
-       
-    
+
 end 
