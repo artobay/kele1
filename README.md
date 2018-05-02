@@ -1,18 +1,11 @@
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+# A Ruby Gem API client for students
+[![kele.png](https://s20.postimg.cc/91tngatxp/kele.png)](https://postimg.cc/image/b6e0hdvk9/)
+
+# Objectives
 
 
-Hi there! Welcome to Cloud9 IDE!
-
-To get you started, create some files, play with the terminal,
-or visit http://docs.c9.io for our documentation.
-If you want, you can also go watch some training videos at
-http://www.youtube.com/user/c9ide.
-
-Happy coding!
-The Cloud9 IDE team
+1. Create a basic Ruby Gem.<br>
+2. Explain authorization with JSON Web Tokens.<br>
+3. Understand the reasons to call an API using a client.<br>
+4. Explain how to update resources via an API.<br>
